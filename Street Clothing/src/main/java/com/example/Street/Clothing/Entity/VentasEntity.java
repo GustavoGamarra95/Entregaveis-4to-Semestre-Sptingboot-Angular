@@ -21,12 +21,16 @@ public class VentasEntity {
     private Double total;
 
     @ManyToOne
-    @JoinColumn (name = "cliente_id")
+    @JoinColumn(name = "cliente_id")
+    private ClienteEntity cliente;
+
+    @ManyToOne
+    @JoinColumn(name = "funcionario_id")
     private FuncionarioEntity funcionario;
 
     @ManyToMany
     @JoinTable(
-            name = "venda_item",
+            name = "venta_item",
             joinColumns = @JoinColumn(name = "venta_id"),
             inverseJoinColumns = @JoinColumn(name = "producto_id")
     )
@@ -34,3 +38,5 @@ public class VentasEntity {
 
 
 }
+
+

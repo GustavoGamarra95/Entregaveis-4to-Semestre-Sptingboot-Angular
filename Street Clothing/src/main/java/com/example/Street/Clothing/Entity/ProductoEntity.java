@@ -27,4 +27,7 @@ public class ProductoEntity {
     @JsonIgnore
     @ManyToMany(mappedBy = "productos")
     private List<VentasEntity> ventas;
+
+
+
 }
